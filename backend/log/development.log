@@ -572,3 +572,14 @@ Processing by DeviseTokenAuth::SessionsController#create as */*
 Completed 200 OK in 582ms (Views: 0.3ms | ActiveRecord: 32.5ms | Allocations: 12988)
 
 
+Started GET "/api/v1/test" for 172.28.0.1 at 2023-07-24 13:17:09 +0000
+Started GET "/api/v1/test" for 172.28.0.1 at 2023-07-24 13:17:10 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (108.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::TestController#index as HTML
+Processing by Api::V1::TestController#index as HTML
+Completed 200 OK in 45ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 2445)
+
+
+Completed 200 OK in 31ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2278)
+
+
