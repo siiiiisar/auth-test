@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { signUp } from "../services/authService";
+
 
 export const SignUp = () => {
 
@@ -13,13 +15,13 @@ export const SignUp = () => {
       name: name,
       email: email,
       password: password,
-      passwordConfirmation: passwordConfirmation,
-      confirmSuccessUrl: confirmSuccessUrl
+      passwordConfirmation: passwordConfirmation
+      //confirmSuccessUrl: confirmSuccessUrl
     }
     return signUpParams;
   }
 
-  handleSignUpSubmit = async (e) => {
+  const handleSignUpSubmit = async (e) => {
     e.preventDefault();
     const params = generateParams();
     try{
@@ -71,7 +73,7 @@ export const SignUp = () => {
         <div>
           <label htmlFor="password_confirmation">Password</label>
           <input
-            type="password_confirmation"
+            type="password"
             id="password_confirmation"
             name="password_confirmation"
             value={passwordConfirmation}

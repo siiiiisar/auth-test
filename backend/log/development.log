@@ -583,3 +583,64 @@ Completed 200 OK in 45ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 2445
 Completed 200 OK in 31ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2278)
 
 
+Started POST "/auth" for 172.28.0.1 at 2023-07-25 22:32:48 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (29.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by DeviseTokenAuth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:3000", "registration"=>{"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:3000"}}
+[31mUnpermitted parameters: :name, :confirm_success_url, :registration. Context: { controller: DeviseTokenAuth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe44bbf50>, params: {"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:3000", "controller"=>"devise_token_auth/registrations", "action"=>"create", "registration"=>{"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:3000"}} }[0m
+[31mUnpermitted parameters: :name, :confirm_success_url, :registration. Context: { controller: DeviseTokenAuth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe44bbf50>, params: {"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:3000", "controller"=>"devise_token_auth/registrations", "action"=>"create", "registration"=>{"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:3000"}} }[0m
+[31mUnpermitted parameters: :name, :confirm_success_url, :registration. Context: { controller: DeviseTokenAuth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe44bbf50>, params: {"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:3000", "controller"=>"devise_token_auth/registrations", "action"=>"create", "registration"=>{"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:3000"}} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (4.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'test@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 595ms (Views: 1.4ms | ActiveRecord: 24.6ms | Allocations: 23235)
+
+
+Started POST "/auth" for 172.28.0.1 at 2023-07-25 22:36:09 +0000
+Processing by DeviseTokenAuth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :name, :registration. Context: { controller: DeviseTokenAuth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe45d0fa8>, params: {"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"devise_token_auth/registrations", "action"=>"create", "registration"=>{"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameters: :name, :registration. Context: { controller: DeviseTokenAuth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe45d0fa8>, params: {"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"devise_token_auth/registrations", "action"=>"create", "registration"=>{"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameters: :name, :registration. Context: { controller: DeviseTokenAuth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe45d0fa8>, params: {"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"devise_token_auth/registrations", "action"=>"create", "registration"=>{"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'test@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 359ms (Views: 1.6ms | ActiveRecord: 6.4ms | Allocations: 4465)
+
+
+Started POST "/auth" for 172.28.0.1 at 2023-07-25 22:38:23 +0000
+Processing by DeviseTokenAuth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"test", "email"=>"test1@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"test", "email"=>"test1@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :name, :registration. Context: { controller: DeviseTokenAuth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe44835d8>, params: {"name"=>"test", "email"=>"test1@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"devise_token_auth/registrations", "action"=>"create", "registration"=>{"name"=>"test", "email"=>"test1@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameters: :name, :registration. Context: { controller: DeviseTokenAuth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe44835d8>, params: {"name"=>"test", "email"=>"test1@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"devise_token_auth/registrations", "action"=>"create", "registration"=>{"name"=>"test", "email"=>"test1@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameters: :name, :registration. Context: { controller: DeviseTokenAuth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe44835d8>, params: {"name"=>"test", "email"=>"test1@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"devise_token_auth/registrations", "action"=>"create", "registration"=>{"name"=>"test", "email"=>"test1@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'test1@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 515ms (Views: 0.3ms | ActiveRecord: 3.8ms | Allocations: 4460)
+
+
+  [1m[36mUser Count (26.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-25 22:45:31 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"test", "email"=>"ctest@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"test", "email"=>"ctest@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4440d28>, params: {"name"=>"test", "email"=>"ctest@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"test", "email"=>"ctest@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4440d28>, params: {"name"=>"test", "email"=>"ctest@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"test", "email"=>"ctest@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4440d28>, params: {"name"=>"test", "email"=>"ctest@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"test", "email"=>"ctest@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'ctest@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (67.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', 'ctest@example.com', '$2a$12$Yj8S9p0qHKzmGH6D17pzLeAs6AZKts9XfctjFKQSONmcJxDvnwM.C', NULL, NULL, FALSE, NULL, NULL, NULL, NULL, NULL, 'test', NULL, NULL, 'ctest@example.com', NULL, '2023-07-25 22:45:32.691090', '2023-07-25 22:45:32.691090')[0m
+  [1m[36mTRANSACTION (18.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (12.6ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"z93ODpfc2X6nohUXAzC-wQ\":{\"token\":\"$2a$10$XgRt58VwPZi9EBDCAZeMGOlfF.ZoFFPAdphTyOh7C1qy1uY1t6Vxy\",\"expiry\":1691534732}}', `users`.`updated_at` = '2023-07-25 22:45:32.938085' WHERE `users`.`id` = 6[0m
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"z93ODpfc2X6nohUXAzC-wQ\":{\"token\":\"$2a$10$AGJgwEoLxYknAl9NxFt13uNL7Q8mPJZtRmvyLfHfLXQ2wcm6G60La\",\"expiry\":1691534733,\"previous_token\":\"$2a$10$XgRt58VwPZi9EBDCAZeMGOlfF.ZoFFPAdphTyOh7C1qy1uY1t6Vxy\",\"updated_at\":\"2023-07-25T22:45:33Z\"}}', `users`.`updated_at` = '2023-07-25 22:45:33.080598' WHERE `users`.`id` = 6[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 894ms (Views: 0.6ms | ActiveRecord: 114.1ms | Allocations: 14416)
+
+
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
