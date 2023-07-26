@@ -644,3 +644,158 @@ Completed 200 OK in 894ms (Views: 0.6ms | ActiveRecord: 114.1ms | Allocations: 1
 
 
   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-26 13:06:56 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b214b0>, params: {"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b214b0>, params: {"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-26 13:06:58 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4527db8>, params: {"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4527db8>, params: {"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b214b0>, params: {"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4527db8>, params: {"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"aaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (13.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (17.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (350.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'aaa@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Exists? (343.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'aaa@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (316.7ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', 'aaa@example.com', '$2a$12$ZEt.voYyyX2dAVkaEm5MKucphUl1yYoj.cZSXi7bK/rmPdhmbHyea', NULL, NULL, FALSE, NULL, NULL, NULL, NULL, NULL, 'aaa', NULL, NULL, 'aaa@example.com', NULL, '2023-07-26 13:06:59.658841', '2023-07-26 13:06:59.658841')[0m
+  [1m[36mTRANSACTION (26.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Create (450.0ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', 'aaa@example.com', '$2a$12$JMLxDEGNS.MY6qpWQG.hcutZOJsAbx9EthGTjlNos9IXm/YF/oheq', NULL, NULL, FALSE, NULL, NULL, NULL, NULL, NULL, 'aaa', NULL, NULL, 'aaa@example.com', NULL, '2023-07-26 13:06:59.691663', '2023-07-26 13:06:59.691663')[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 2782ms (ActiveRecord: 983.9ms | Allocations: 12375)
+
+
+  
+ActiveRecord::RecordNotUnique (Mysql2::Error: Duplicate entry 'aaa@example.com-email' for key 'users.index_users_on_uid_and_provider'):
+  
+mysql2 (0.5.5) lib/mysql2/client.rb:151:in `_query'
+mysql2 (0.5.5) lib/mysql2/client.rb:151:in `block in query'
+mysql2 (0.5.5) lib/mysql2/client.rb:150:in `handle_interrupt'
+mysql2 (0.5.5) lib/mysql2/client.rb:150:in `query'
+activerecord (7.0.6) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:636:in `block (2 levels) in raw_execute'
+activesupport (7.0.6) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (7.0.6) lib/active_support/dependencies/interlock.rb:41:in `permit_concurrent_loads'
+activerecord (7.0.6) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:635:in `block in raw_execute'
+activesupport (7.0.6) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+activesupport (7.0.6) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+activesupport (7.0.6) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+activesupport (7.0.6) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+activerecord (7.0.6) lib/active_record/connection_adapters/abstract_adapter.rb:769:in `block in log'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activerecord (7.0.6) lib/active_record/connection_adapters/abstract_adapter.rb:760:in `log'
+activerecord (7.0.6) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:634:in `raw_execute'
+activerecord (7.0.6) lib/active_record/connection_adapters/mysql/database_statements.rb:96:in `raw_execute'
+activerecord (7.0.6) lib/active_record/connection_adapters/mysql/database_statements.rb:47:in `execute'
+activerecord (7.0.6) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:207:in `execute_and_free'
+activerecord (7.0.6) lib/active_record/connection_adapters/mysql/database_statements.rb:52:in `exec_query'
+activerecord (7.0.6) lib/active_record/connection_adapters/abstract/database_statements.rb:132:in `exec_insert'
+activerecord (7.0.6) lib/active_record/connection_adapters/abstract/database_statements.rb:167:in `insert'
+activerecord (7.0.6) lib/active_record/connection_adapters/abstract/query_cache.rb:22:in `insert'
+activerecord (7.0.6) lib/active_record/persistence.rb:496:in `_insert_record'
+activerecord (7.0.6) lib/active_record/persistence.rb:1096:in `_create_record'
+activerecord (7.0.6) lib/active_record/counter_cache.rb:166:in `_create_record'
+activerecord (7.0.6) lib/active_record/locking/optimistic.rb:84:in `_create_record'
+activerecord (7.0.6) lib/active_record/attribute_methods/dirty.rb:222:in `_create_record'
+activerecord (7.0.6) lib/active_record/callbacks.rb:459:in `block in _create_record'
+activesupport (7.0.6) lib/active_support/callbacks.rb:107:in `run_callbacks'
+activesupport (7.0.6) lib/active_support/callbacks.rb:929:in `_run_create_callbacks'
+activerecord (7.0.6) lib/active_record/callbacks.rb:459:in `_create_record'
+activerecord (7.0.6) lib/active_record/timestamp.rb:108:in `_create_record'
+activerecord (7.0.6) lib/active_record/persistence.rb:1067:in `create_or_update'
+activerecord (7.0.6) lib/active_record/callbacks.rb:455:in `block in create_or_update'
+activesupport (7.0.6) lib/active_support/callbacks.rb:107:in `run_callbacks'
+activesupport (7.0.6) lib/active_support/callbacks.rb:929:in `_run_save_callbacks'
+activerecord (7.0.6) lib/active_record/callbacks.rb:455:in `create_or_update'
+activerecord (7.0.6) lib/active_record/timestamp.rb:126:in `create_or_update'
+activerecord (7.0.6) lib/active_record/persistence.rb:615:in `save'
+activerecord (7.0.6) lib/active_record/validations.rb:47:in `save'
+activerecord (7.0.6) lib/active_record/transactions.rb:298:in `block in save'
+activerecord (7.0.6) lib/active_record/transactions.rb:354:in `block in with_transaction_returning_status'
+activerecord (7.0.6) lib/active_record/connection_adapters/abstract/transaction.rb:319:in `block in within_new_transaction'
+activesupport (7.0.6) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+activesupport (7.0.6) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+activesupport (7.0.6) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+activesupport (7.0.6) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+activerecord (7.0.6) lib/active_record/connection_adapters/abstract/transaction.rb:317:in `within_new_transaction'
+activerecord (7.0.6) lib/active_record/connection_adapters/abstract/database_statements.rb:316:in `transaction'
+activerecord (7.0.6) lib/active_record/transactions.rb:350:in `with_transaction_returning_status'
+activerecord (7.0.6) lib/active_record/transactions.rb:298:in `save'
+activerecord (7.0.6) lib/active_record/suppressor.rb:50:in `save'
+devise_token_auth (1.2.2) app/controllers/devise_token_auth/registrations_controller.rb:43:in `create'
+actionpack (7.0.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.6) lib/active_support/callbacks.rb:107:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.6) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mUser Update (36.9ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"KCK2DCKsrEbl9w-JMG3lBg\":{\"token\":\"$2a$10$vEP7sa9YPtn2keLFz5GJq.kgFSKbo2lUZZ9uxfSYmp0XKVdGRJEBC\",\"expiry\":1691586420}}', `users`.`updated_at` = '2023-07-26 13:07:00.149362' WHERE `users`.`id` = 7[0m
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (6.4ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"KCK2DCKsrEbl9w-JMG3lBg\":{\"token\":\"$2a$10$pHDTUE8BKKH7kdW9hlpnSujmEJRjq7OcRWtCArSHCsGvfWHs3FGtu\",\"expiry\":1691586420,\"previous_token\":\"$2a$10$vEP7sa9YPtn2keLFz5GJq.kgFSKbo2lUZZ9uxfSYmp0XKVdGRJEBC\",\"updated_at\":\"2023-07-26T13:07:00Z\"}}', `users`.`updated_at` = '2023-07-26 13:07:00.361243' WHERE `users`.`id` = 7[0m
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 2031ms (Views: 0.7ms | ActiveRecord: 928.6ms | Allocations: 19654)
+
+

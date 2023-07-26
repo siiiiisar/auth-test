@@ -1,14 +1,17 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { signUp } from "../services/authService";
-
+import Cookies from "js-cookie";
+import { AuthContext } from "../App";
+import { useNavigate } from "react-router-dom";
 
 export const SignUp = () => {
-
+  const { setIsSignedIn, setCurrentUser} = useContext(AuthContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
-  const confirmSuccessUrl = "http://localhost:3000";
+  const navigate = useNavigate();
+
 
   const generateParams = () => {
     const signUpParams = {
@@ -27,6 +30,18 @@ export const SignUp = () => {
     try{
       const res = await signUp(params);
       console.log(res);
+
+      if(res.status === 200){
+        Cookies.set("_access_token", res.headers["access-token"])
+        Cookies.set("_client", res.headers["client"])
+        Cookies.set("_uid", res.headers["uid"])
+
+        setIsSignedIn(true);
+        setCurrentUser(res.data.data);
+
+        navigate("/");
+
+      }
     }catch (e){
       console.log(e);
     }
