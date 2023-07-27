@@ -799,3 +799,153 @@ puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
 Completed 200 OK in 2031ms (Views: 0.7ms | ActiveRecord: 928.6ms | Allocations: 19654)
 
 
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-26 22:37:09 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"saa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"saa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe19d21e0>, params: {"name"=>"saa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"saa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe19d21e0>, params: {"name"=>"saa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"saa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe19d21e0>, params: {"name"=>"saa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"saa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (230.9ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 1644ms (Views: 17.5ms | ActiveRecord: 347.2ms | Allocations: 5140)
+
+
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-26 22:37:24 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b3c580>, params: {"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b3c580>, params: {"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b3c580>, params: {"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'ex@ex.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 423ms (Views: 0.4ms | ActiveRecord: 2.9ms | Allocations: 4551)
+
+
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-26 22:37:27 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe19c4608>, params: {"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe19c4608>, params: {"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe19c4608>, params: {"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"ex@ex.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'ex@ex.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 619ms (Views: 1.3ms | ActiveRecord: 2.1ms | Allocations: 4473)
+
+
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-26 22:49:56 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"aaa", "email"=>"test3@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"aaa", "email"=>"test3@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4426360>, params: {"name"=>"aaa", "email"=>"test3@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"test3@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4426360>, params: {"name"=>"aaa", "email"=>"test3@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"test3@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4426360>, params: {"name"=>"aaa", "email"=>"test3@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"test3@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (37.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'test3@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (113.1ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', 'test3@example.com', '$2a$12$xemPcMRQi8J.V5GtwycQkObSJt0DuwijZO3GhbCYfyAbhtknYSFAu', NULL, NULL, FALSE, NULL, NULL, NULL, NULL, NULL, 'aaa', NULL, NULL, 'test3@example.com', NULL, '2023-07-26 22:49:56.860284', '2023-07-26 22:49:56.860284')[0m
+  [1m[36mTRANSACTION (40.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (26.3ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"VpS7XMmgcx7VBaZFE8F7Hg\":{\"token\":\"$2a$10$qDzsYNnEqWf3Y/ZPrYkAu.Xw1Ncu5Eip9FUulmcK7nuEr2rwZxA2O\",\"expiry\":1691621397}}', `users`.`updated_at` = '2023-07-26 22:49:57.234751' WHERE `users`.`id` = 9[0m
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (2.2ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (2.2ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"VpS7XMmgcx7VBaZFE8F7Hg\":{\"token\":\"$2a$10$A0wsghvH2yy983UB5dQhJOx3SYP6mdiHMkgsnUdAYMr8Th/TegdM6\",\"expiry\":1691621397,\"previous_token\":\"$2a$10$qDzsYNnEqWf3Y/ZPrYkAu.Xw1Ncu5Eip9FUulmcK7nuEr2rwZxA2O\",\"updated_at\":\"2023-07-26T22:49:57Z\"}}', `users`.`updated_at` = '2023-07-26 22:49:57.506204' WHERE `users`.`id` = 9[0m
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 1420ms (Views: 1.0ms | ActiveRecord: 264.9ms | Allocations: 13178)
+
+
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-27 13:02:35 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4434258>, params: {"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4434258>, params: {"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4434258>, params: {"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (62.0ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'a' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 785ms (Views: 8.6ms | ActiveRecord: 99.0ms | Allocations: 5372)
+
+
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-27 13:08:57 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe44fb9c0>, params: {"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe44fb9c0>, params: {"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe44fb9c0>, params: {"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (26.7ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mTRANSACTION (47.6ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 188ms (Views: 0.3ms | ActiveRecord: 81.8ms | Allocations: 5037)
+
+
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-27 13:09:05 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"aaa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"aaa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe47b8de8>, params: {"name"=>"aaa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe47b8de8>, params: {"name"=>"aaa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe47b8de8>, params: {"name"=>"aaa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (6.9ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 313ms (Views: 5.0ms | ActiveRecord: 7.7ms | Allocations: 4926)
+
+
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-27 13:09:14 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"aaa", "email"=>"aaa@aaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"aaa", "email"=>"aaa@aaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe44be9d0>, params: {"name"=>"aaa", "email"=>"aaa@aaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"aaa@aaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe44be9d0>, params: {"name"=>"aaa", "email"=>"aaa@aaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"aaa@aaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe44be9d0>, params: {"name"=>"aaa", "email"=>"aaa@aaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"aaa", "email"=>"aaa@aaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'aaa@aaa' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 446ms (Views: 0.4ms | ActiveRecord: 1.8ms | Allocations: 4524)
+
+
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-27 13:10:31 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"invalid?test", "email"=>"invalid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"invalid?test", "email"=>"invalid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b53168>, params: {"name"=>"invalid?test", "email"=>"invalid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"invalid?test", "email"=>"invalid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b53168>, params: {"name"=>"invalid?test", "email"=>"invalid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"invalid?test", "email"=>"invalid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b53168>, params: {"name"=>"invalid?test", "email"=>"invalid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"invalid?test", "email"=>"invalid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'invalid@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 399ms (Views: 15.3ms | ActiveRecord: 1.6ms | Allocations: 4396)
+
+
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-27 13:10:51 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b1f5c0>, params: {"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b1f5c0>, params: {"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b1f5c0>, params: {"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'valid@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 362ms (Views: 0.6ms | ActiveRecord: 4.1ms | Allocations: 4394)
+
+
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-27 13:11:03 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b9f518>, params: {"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b9f518>, params: {"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b9f518>, params: {"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"valid?test", "email"=>"valid@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'valid@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (40.2ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', 'valid@example.com', '$2a$12$1zy2WyI9cy4leQf9/FdN9.SvQj11qbsNg8JtcX3ExWWVUxyWAkiZi', NULL, NULL, FALSE, NULL, NULL, NULL, NULL, NULL, 'valid?test', NULL, NULL, 'valid@example.com', NULL, '2023-07-27 13:11:03.680372', '2023-07-27 13:11:03.680372')[0m
+  [1m[36mTRANSACTION (24.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (26.1ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oRSET2M5v17SyQsNOHdCKQ\":{\"token\":\"$2a$10$2co9HXBO5p9fkc2cyQrGSebla4EDn231yM5wBiKuLYNmkGvYyYtta\",\"expiry\":1691673063}}', `users`.`updated_at` = '2023-07-27 13:11:03.893270' WHERE `users`.`id` = 10[0m
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (3.3ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oRSET2M5v17SyQsNOHdCKQ\":{\"token\":\"$2a$10$hoyafcyHa4V/z3a2rTS4HOdY533oxYmk48SN8E7V6WaHj4V61ZM4i\",\"expiry\":1691673064,\"previous_token\":\"$2a$10$2co9HXBO5p9fkc2cyQrGSebla4EDn231yM5wBiKuLYNmkGvYyYtta\",\"updated_at\":\"2023-07-27T13:11:04Z\"}}', `users`.`updated_at` = '2023-07-27 13:11:04.122852' WHERE `users`.`id` = 10[0m
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 746ms (Views: 0.3ms | ActiveRecord: 113.9ms | Allocations: 13065)
+
+

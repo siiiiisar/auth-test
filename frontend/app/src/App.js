@@ -24,8 +24,8 @@ function App() {
     >
       <BrowserRouter>
         <Routes>
-          <Route path="/signup" element={<SignUp/>}/>
-          <Route path="/" element={<Home/>}/>
+          <Route path="/signup" element={<SignUp/>}/>        
+          <Route path="/" element={<Home/>}/>                             
         </Routes>
       </BrowserRouter>
     </AuthContext.Provider>
