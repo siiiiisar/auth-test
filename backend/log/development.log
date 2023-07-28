@@ -949,3 +949,67 @@ Processing by Api::V1::Auth::RegistrationsController#create as HTML
 Completed 200 OK in 746ms (Views: 0.3ms | ActiveRecord: 113.9ms | Allocations: 13065)
 
 
+  [1m[36mUser Load (111.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mUser Count (80.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-28 12:34:03 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"test", "email"=>"t@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"test", "email"=>"t@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe449cda8>, params: {"name"=>"test", "email"=>"t@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"test", "email"=>"t@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe449cda8>, params: {"name"=>"test", "email"=>"t@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"test", "email"=>"t@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe449cda8>, params: {"name"=>"test", "email"=>"t@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"test", "email"=>"t@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (25.9ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 't@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (45.2ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', 't@example.com', '$2a$12$Xka2xdTP.j44bbzX3vEgAOzZrZ5GuqhWzeVJgAqdQjC/7WkE3oWOe', NULL, NULL, FALSE, NULL, NULL, NULL, NULL, NULL, 'test', NULL, NULL, 't@example.com', NULL, '2023-07-28 12:34:04.443320', '2023-07-28 12:34:04.443320')[0m
+  [1m[36mTRANSACTION (49.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (12.4ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"expiry\":1691757244}}', `users`.`updated_at` = '2023-07-28 12:34:04.725393' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (3.7ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"}}', `users`.`updated_at` = '2023-07-28 12:34:04.928637' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 1013ms (Views: 2.0ms | ActiveRecord: 159.3ms | Allocations: 13162)
+
+
+Started POST "/api/v1/auth/sign_in" for 172.28.0.1 at 2023-07-28 12:34:18 +0000
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"t@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b00be8>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b00be8>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (84.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 't@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b00be8>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b00be8>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (8.3ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"expiry\":1691757259}}', `users`.`updated_at` = '2023-07-28 12:34:19.715032' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (8.6ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"}}', `users`.`updated_at` = '2023-07-28 12:34:19.877050' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 841ms (Views: 0.3ms | ActiveRecord: 118.5ms | Allocations: 11676)
+
+
+Started POST "/api/v1/auth/sign_in" for 172.28.0.1 at 2023-07-28 13:26:02 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"t@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b4c818>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b4c818>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (54.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 't@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b4c818>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1b4c818>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (6.7ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (19.5ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"},\"eiYagUDZK1_psZPq6hKYPg\":{\"token\":\"$2a$10$GUM4dhT/zGKgws.cquUN9Otq4/Ji/7wbPCyU2C2AQ5Qb.MtpIErQ2\",\"expiry\":1691760363}}', `users`.`updated_at` = '2023-07-28 13:26:03.187592' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (16.8ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"},\"eiYagUDZK1_psZPq6hKYPg\":{\"token\":\"$2a$10$K5h0ouAzcDdXWk8IX7lRu.2wxLjjF1ZWFzxYUrpCKGOmcaLRuVLCu\",\"expiry\":1691760363,\"previous_token\":\"$2a$10$GUM4dhT/zGKgws.cquUN9Otq4/Ji/7wbPCyU2C2AQ5Qb.MtpIErQ2\",\"updated_at\":\"2023-07-28T13:26:03Z\"}}', `users`.`updated_at` = '2023-07-28 13:26:03.322480' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 1083ms (Views: 1.2ms | ActiveRecord: 146.5ms | Allocations: 11516)
+
+

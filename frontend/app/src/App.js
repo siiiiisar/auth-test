@@ -1,5 +1,6 @@
 import './App.css';
 import { SignUp } from './pages/SignUpPage';
+import { SignIn } from './pages/SignInPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { createContext, useState } from 'react';
 import { Home } from './pages/Home';
@@ -24,7 +25,8 @@ function App() {
     >
       <BrowserRouter>
         <Routes>
-          <Route path="/signup" element={<SignUp/>}/>        
+          <Route path="/signup" element={<SignUp/>}/>     
+          <Route path="/signin" element={<SignIn/>}/>     
           <Route path="/" element={<Home/>}/>                             
         </Routes>
       </BrowserRouter>

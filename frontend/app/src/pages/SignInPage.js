@@ -1,35 +1,30 @@
 import { useState, useContext } from "react"
-import { signUp } from "../services/authService";
+import { signIn } from "../services/authService";
 import Cookies from "js-cookie";
 import { AuthContext } from "../App";
 import { useNavigate } from "react-router-dom";
 import { Grid, TextField, Container, Box , CssBaseline, Typography, Button, Alert } from "@mui/material";
 
-export const SignUp = () => {
-  const { setIsSignedIn, setCurrentUser} = useContext(AuthContext);
-  const [name, setName] = useState("");
+export const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [alertMessageOpen, setAlertMessageOpen] = useState(false);
+  const {setIsSignedIn, setCurrentUser} = useContext(AuthContext);
   const navigate = useNavigate();
-
 
   const generateParams = () => {
     const signUpParams = {
-      name: name,
       email: email,
-      password: password,
-      passwordConfirmation: passwordConfirmation
+      password: password
     }
     return signUpParams;
   }
 
-  const handleSignUpSubmit = async (e) => {
+  const handleSignInSubmit = async (e) => {
     e.preventDefault();
     const params = generateParams();
     try{
-      const res = await signUp(params);
+      const res = await signIn(params);
       console.log(res);
 
       if(res.status === 200){
@@ -62,23 +57,10 @@ export const SignUp = () => {
             }}
           >
           <Typography component="h1" variant="h5">
-            Sign up
+            Sign in
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSignUpSubmit} sx={{ mt: 3 }}>
-            <Grid container spacing={2}>
-              <Grid item xs={12}>
-                <TextField
-                  autoComplete="given-name"
-                  name="name"
-                  required
-                  fullWidth
-                  id="name"
-                  label="Name"
-                  autoFocus
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </Grid>      
+          <Box component="form" noValidate onSubmit={handleSignInSubmit} sx={{ mt: 3 }}>
+            <Grid container spacing={2}>    
               <Grid item xs={12}>
                 <TextField
                   required
@@ -102,18 +84,6 @@ export const SignUp = () => {
                   autoComplete="new-password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  name="password_confirmation"
-                  label="Password Confirmation"
-                  type="password"
-                  id="password_confirmation"
-                  value={passwordConfirmation}
-                  onChange={(e) => setPasswordConfirmation(e.target.value)}
                 />
               </Grid>
             </Grid>
