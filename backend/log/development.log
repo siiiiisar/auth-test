@@ -1013,3 +1013,273 @@ Processing by DeviseTokenAuth::SessionsController#create as HTML
 Completed 200 OK in 1083ms (Views: 1.2ms | ActiveRecord: 146.5ms | Allocations: 11516)
 
 
+Started POST "/api/v1/auth/sign_in" for 172.28.0.1 at 2023-07-29 06:43:37 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"t@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe19d8680>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe19d8680>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+Started POST "/api/v1/auth/sign_in" for 172.28.0.1 at 2023-07-29 06:43:39 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"t@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1af73b8>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1af73b8>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (509.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 't@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (519.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 't@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe19d8680>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe19d8680>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1af73b8>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe1af73b8>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (19.9ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (76.6ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"},\"eiYagUDZK1_psZPq6hKYPg\":{\"token\":\"$2a$10$K5h0ouAzcDdXWk8IX7lRu.2wxLjjF1ZWFzxYUrpCKGOmcaLRuVLCu\",\"expiry\":1691760363,\"previous_token\":\"$2a$10$GUM4dhT/zGKgws.cquUN9Otq4/Ji/7wbPCyU2C2AQ5Qb.MtpIErQ2\",\"updated_at\":\"2023-07-28T13:26:03Z\"},\"fML43XKu2MrSZRqQQ7HXqw\":{\"token\":\"$2a$10$IBUXQdrfBxIMghTfKrYC7.ShFjI7dYvexCN3g6Ggz/mdWHoROm8iS\",\"expiry\":1691822621}}', `users`.`updated_at` = '2023-07-29 06:43:41.821620' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (47.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (474.7ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Load (15.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (37.6ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"},\"eiYagUDZK1_psZPq6hKYPg\":{\"token\":\"$2a$10$K5h0ouAzcDdXWk8IX7lRu.2wxLjjF1ZWFzxYUrpCKGOmcaLRuVLCu\",\"expiry\":1691760363,\"previous_token\":\"$2a$10$GUM4dhT/zGKgws.cquUN9Otq4/Ji/7wbPCyU2C2AQ5Qb.MtpIErQ2\",\"updated_at\":\"2023-07-28T13:26:03Z\"},\"fML43XKu2MrSZRqQQ7HXqw\":{\"token\":\"$2a$10$IBUXQdrfBxIMghTfKrYC7.ShFjI7dYvexCN3g6Ggz/mdWHoROm8iS\",\"expiry\":1691822621},\"bm7IH2fAx9tt_7oiuCLPKw\":{\"token\":\"$2a$10$WgewZV/IUYKQqjpZ3X4mW.Q11Upa26iRjGF0/y/1yGQwZPTVWEwJK\",\"expiry\":1691822622}}', `users`.`updated_at` = '2023-07-29 06:43:42.284498' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (124.1ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (18.4ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"},\"eiYagUDZK1_psZPq6hKYPg\":{\"token\":\"$2a$10$K5h0ouAzcDdXWk8IX7lRu.2wxLjjF1ZWFzxYUrpCKGOmcaLRuVLCu\",\"expiry\":1691760363,\"previous_token\":\"$2a$10$GUM4dhT/zGKgws.cquUN9Otq4/Ji/7wbPCyU2C2AQ5Qb.MtpIErQ2\",\"updated_at\":\"2023-07-28T13:26:03Z\"},\"fML43XKu2MrSZRqQQ7HXqw\":{\"token\":\"$2a$10$9xM1fHRqRDRBvuSad2Rd4O4I.rFq4WT174KX8GajD9fiTJ2GbeugK\",\"expiry\":1691822622,\"previous_token\":\"$2a$10$IBUXQdrfBxIMghTfKrYC7.ShFjI7dYvexCN3g6Ggz/mdWHoROm8iS\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"bm7IH2fAx9tt_7oiuCLPKw\":{\"token\":\"$2a$10$WgewZV/IUYKQqjpZ3X4mW.Q11Upa26iRjGF0/y/1yGQwZPTVWEwJK\",\"expiry\":1691822622}}', `users`.`updated_at` = '2023-07-29 06:43:42.516581' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (136.1ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+Completed 200 OK in 3795ms (Views: 21.9ms | ActiveRecord: 961.9ms | Allocations: 21508)
+
+
+  [1m[36mUser Update (2.6ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"},\"eiYagUDZK1_psZPq6hKYPg\":{\"token\":\"$2a$10$K5h0ouAzcDdXWk8IX7lRu.2wxLjjF1ZWFzxYUrpCKGOmcaLRuVLCu\",\"expiry\":1691760363,\"previous_token\":\"$2a$10$GUM4dhT/zGKgws.cquUN9Otq4/Ji/7wbPCyU2C2AQ5Qb.MtpIErQ2\",\"updated_at\":\"2023-07-28T13:26:03Z\"},\"fML43XKu2MrSZRqQQ7HXqw\":{\"token\":\"$2a$10$9xM1fHRqRDRBvuSad2Rd4O4I.rFq4WT174KX8GajD9fiTJ2GbeugK\",\"expiry\":1691822622,\"previous_token\":\"$2a$10$IBUXQdrfBxIMghTfKrYC7.ShFjI7dYvexCN3g6Ggz/mdWHoROm8iS\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"bm7IH2fAx9tt_7oiuCLPKw\":{\"token\":\"$2a$10$nN4D6AJ3kkq3AmbkA3TrpOmx4GN6iKszFSyCwBF5reghrlup8pGca\",\"expiry\":1691822623,\"previous_token\":\"$2a$10$WgewZV/IUYKQqjpZ3X4mW.Q11Upa26iRjGF0/y/1yGQwZPTVWEwJK\",\"updated_at\":\"2023-07-29T06:43:42Z\"}}', `users`.`updated_at` = '2023-07-29 06:43:43.305273' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 3950ms (Views: 0.5ms | ActiveRecord: 1299.6ms | Allocations: 23478)
+
+
+Started POST "/api/v1/auth/sign_in" for 172.28.0.1 at 2023-07-29 13:40:12 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"t@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe19d34a0>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe19d34a0>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (134.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 't@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe19d34a0>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe19d34a0>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (11.9ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (60.9ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"},\"eiYagUDZK1_psZPq6hKYPg\":{\"token\":\"$2a$10$K5h0ouAzcDdXWk8IX7lRu.2wxLjjF1ZWFzxYUrpCKGOmcaLRuVLCu\",\"expiry\":1691760363,\"previous_token\":\"$2a$10$GUM4dhT/zGKgws.cquUN9Otq4/Ji/7wbPCyU2C2AQ5Qb.MtpIErQ2\",\"updated_at\":\"2023-07-28T13:26:03Z\"},\"fML43XKu2MrSZRqQQ7HXqw\":{\"token\":\"$2a$10$9xM1fHRqRDRBvuSad2Rd4O4I.rFq4WT174KX8GajD9fiTJ2GbeugK\",\"expiry\":1691822622,\"previous_token\":\"$2a$10$IBUXQdrfBxIMghTfKrYC7.ShFjI7dYvexCN3g6Ggz/mdWHoROm8iS\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"bm7IH2fAx9tt_7oiuCLPKw\":{\"token\":\"$2a$10$nN4D6AJ3kkq3AmbkA3TrpOmx4GN6iKszFSyCwBF5reghrlup8pGca\",\"expiry\":1691822623,\"previous_token\":\"$2a$10$WgewZV/IUYKQqjpZ3X4mW.Q11Upa26iRjGF0/y/1yGQwZPTVWEwJK\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"Py-_dfP9FwlJIULiJFsiOA\":{\"token\":\"$2a$10$JODkxdS2IuPvpbvcAnbdCuIpm65N26H0OLkU4962pB0.CslM01SoO\",\"expiry\":1691847614}}', `users`.`updated_at` = '2023-07-29 13:40:14.411221' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (25.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (2.4ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (2.5ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"},\"eiYagUDZK1_psZPq6hKYPg\":{\"token\":\"$2a$10$K5h0ouAzcDdXWk8IX7lRu.2wxLjjF1ZWFzxYUrpCKGOmcaLRuVLCu\",\"expiry\":1691760363,\"previous_token\":\"$2a$10$GUM4dhT/zGKgws.cquUN9Otq4/Ji/7wbPCyU2C2AQ5Qb.MtpIErQ2\",\"updated_at\":\"2023-07-28T13:26:03Z\"},\"fML43XKu2MrSZRqQQ7HXqw\":{\"token\":\"$2a$10$9xM1fHRqRDRBvuSad2Rd4O4I.rFq4WT174KX8GajD9fiTJ2GbeugK\",\"expiry\":1691822622,\"previous_token\":\"$2a$10$IBUXQdrfBxIMghTfKrYC7.ShFjI7dYvexCN3g6Ggz/mdWHoROm8iS\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"bm7IH2fAx9tt_7oiuCLPKw\":{\"token\":\"$2a$10$nN4D6AJ3kkq3AmbkA3TrpOmx4GN6iKszFSyCwBF5reghrlup8pGca\",\"expiry\":1691822623,\"previous_token\":\"$2a$10$WgewZV/IUYKQqjpZ3X4mW.Q11Upa26iRjGF0/y/1yGQwZPTVWEwJK\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"Py-_dfP9FwlJIULiJFsiOA\":{\"token\":\"$2a$10$ZjpGbR.JvLONZPozQEorsO0Zufz9Frg3tLP1RKckWYpLHyzzTPksm\",\"expiry\":1691847614,\"previous_token\":\"$2a$10$JODkxdS2IuPvpbvcAnbdCuIpm65N26H0OLkU4962pB0.CslM01SoO\",\"updated_at\":\"2023-07-29T13:40:14Z\"}}', `users`.`updated_at` = '2023-07-29 13:40:14.748803' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 1704ms (Views: 11.7ms | ActiveRecord: 329.9ms | Allocations: 11881)
+
+
+Started POST "/api/v1/auth/sign_in" for 172.28.0.1 at 2023-07-29 14:18:43 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"t@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4428020>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4428020>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (75.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 't@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4428020>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fdbe4428020>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (7.6ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (27.3ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"},\"eiYagUDZK1_psZPq6hKYPg\":{\"token\":\"$2a$10$K5h0ouAzcDdXWk8IX7lRu.2wxLjjF1ZWFzxYUrpCKGOmcaLRuVLCu\",\"expiry\":1691760363,\"previous_token\":\"$2a$10$GUM4dhT/zGKgws.cquUN9Otq4/Ji/7wbPCyU2C2AQ5Qb.MtpIErQ2\",\"updated_at\":\"2023-07-28T13:26:03Z\"},\"fML43XKu2MrSZRqQQ7HXqw\":{\"token\":\"$2a$10$9xM1fHRqRDRBvuSad2Rd4O4I.rFq4WT174KX8GajD9fiTJ2GbeugK\",\"expiry\":1691822622,\"previous_token\":\"$2a$10$IBUXQdrfBxIMghTfKrYC7.ShFjI7dYvexCN3g6Ggz/mdWHoROm8iS\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"bm7IH2fAx9tt_7oiuCLPKw\":{\"token\":\"$2a$10$nN4D6AJ3kkq3AmbkA3TrpOmx4GN6iKszFSyCwBF5reghrlup8pGca\",\"expiry\":1691822623,\"previous_token\":\"$2a$10$WgewZV/IUYKQqjpZ3X4mW.Q11Upa26iRjGF0/y/1yGQwZPTVWEwJK\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"Py-_dfP9FwlJIULiJFsiOA\":{\"token\":\"$2a$10$ZjpGbR.JvLONZPozQEorsO0Zufz9Frg3tLP1RKckWYpLHyzzTPksm\",\"expiry\":1691847614,\"previous_token\":\"$2a$10$JODkxdS2IuPvpbvcAnbdCuIpm65N26H0OLkU4962pB0.CslM01SoO\",\"updated_at\":\"2023-07-29T13:40:14Z\"},\"yZIWF18loabp8f19dI5Jdg\":{\"token\":\"$2a$10$46ojrDvLWs5TCixU8tgc/eKuhInjjOUA.JNZHT9KktSh3EGn8ydhy\",\"expiry\":1691849924}}', `users`.`updated_at` = '2023-07-29 14:18:44.365076' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (14.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (8.2ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"},\"eiYagUDZK1_psZPq6hKYPg\":{\"token\":\"$2a$10$K5h0ouAzcDdXWk8IX7lRu.2wxLjjF1ZWFzxYUrpCKGOmcaLRuVLCu\",\"expiry\":1691760363,\"previous_token\":\"$2a$10$GUM4dhT/zGKgws.cquUN9Otq4/Ji/7wbPCyU2C2AQ5Qb.MtpIErQ2\",\"updated_at\":\"2023-07-28T13:26:03Z\"},\"fML43XKu2MrSZRqQQ7HXqw\":{\"token\":\"$2a$10$9xM1fHRqRDRBvuSad2Rd4O4I.rFq4WT174KX8GajD9fiTJ2GbeugK\",\"expiry\":1691822622,\"previous_token\":\"$2a$10$IBUXQdrfBxIMghTfKrYC7.ShFjI7dYvexCN3g6Ggz/mdWHoROm8iS\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"bm7IH2fAx9tt_7oiuCLPKw\":{\"token\":\"$2a$10$nN4D6AJ3kkq3AmbkA3TrpOmx4GN6iKszFSyCwBF5reghrlup8pGca\",\"expiry\":1691822623,\"previous_token\":\"$2a$10$WgewZV/IUYKQqjpZ3X4mW.Q11Upa26iRjGF0/y/1yGQwZPTVWEwJK\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"Py-_dfP9FwlJIULiJFsiOA\":{\"token\":\"$2a$10$ZjpGbR.JvLONZPozQEorsO0Zufz9Frg3tLP1RKckWYpLHyzzTPksm\",\"expiry\":1691847614,\"previous_token\":\"$2a$10$JODkxdS2IuPvpbvcAnbdCuIpm65N26H0OLkU4962pB0.CslM01SoO\",\"updated_at\":\"2023-07-29T13:40:14Z\"},\"yZIWF18loabp8f19dI5Jdg\":{\"token\":\"$2a$10$IywDZXj9b9dzkzSPjhXdyesbiCT6j/gWr.D.feRM/fg0c9MbAripa\",\"expiry\":1691849924,\"previous_token\":\"$2a$10$46ojrDvLWs5TCixU8tgc/eKuhInjjOUA.JNZHT9KktSh3EGn8ydhy\",\"updated_at\":\"2023-07-29T14:18:44Z\"}}', `users`.`updated_at` = '2023-07-29 14:18:44.581192' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 1211ms (Views: 3.5ms | ActiveRecord: 201.8ms | Allocations: 11999)
+
+
+Started DELETE "/api/v1/auth/sign_out" for 172.28.0.1 at 2023-07-29 14:18:48 +0000
+Processing by DeviseTokenAuth::SessionsController#destroy as HTML
+  [1m[36mUser Load (11.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 't@example.com' LIMIT 1[0m
+Completed 500 Internal Server Error in 465ms (ActiveRecord: 11.2ms | Allocations: 1284)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+actionpack (7.0.6) lib/action_dispatch/request/session.rb:253:in `load_for_write!'
+actionpack (7.0.6) lib/action_dispatch/request/session.rb:151:in `[]='
+warden (1.2.9) lib/warden/session_serializer.rb:27:in `store'
+devise (4.9.2) lib/devise/controllers/sign_in_out.rb:68:in `bypass_sign_in'
+devise_token_auth (1.2.2) app/controllers/devise_token_auth/concerns/set_user_by_token.rb:90:in `set_user_by_token'
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.6) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/sign_in" for 172.28.0.1 at 2023-07-29 14:53:32 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (143.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/api/v1/auth/sign_in" for 172.28.0.1 at 2023-07-29 14:53:37 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"t@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}}
+  Parameters: {"email"=>"t@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd0f6c615f0>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd0f6c615f0>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd0f5e13160>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd0f5e13160>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (12.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 't@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (43.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 't@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd0f6c615f0>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd0f5e13160>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd0f6c615f0>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd0f5e13160>, params: {"email"=>"t@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"t@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (3.2ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (28.1ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"},\"eiYagUDZK1_psZPq6hKYPg\":{\"token\":\"$2a$10$K5h0ouAzcDdXWk8IX7lRu.2wxLjjF1ZWFzxYUrpCKGOmcaLRuVLCu\",\"expiry\":1691760363,\"previous_token\":\"$2a$10$GUM4dhT/zGKgws.cquUN9Otq4/Ji/7wbPCyU2C2AQ5Qb.MtpIErQ2\",\"updated_at\":\"2023-07-28T13:26:03Z\"},\"fML43XKu2MrSZRqQQ7HXqw\":{\"token\":\"$2a$10$9xM1fHRqRDRBvuSad2Rd4O4I.rFq4WT174KX8GajD9fiTJ2GbeugK\",\"expiry\":1691822622,\"previous_token\":\"$2a$10$IBUXQdrfBxIMghTfKrYC7.ShFjI7dYvexCN3g6Ggz/mdWHoROm8iS\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"bm7IH2fAx9tt_7oiuCLPKw\":{\"token\":\"$2a$10$nN4D6AJ3kkq3AmbkA3TrpOmx4GN6iKszFSyCwBF5reghrlup8pGca\",\"expiry\":1691822623,\"previous_token\":\"$2a$10$WgewZV/IUYKQqjpZ3X4mW.Q11Upa26iRjGF0/y/1yGQwZPTVWEwJK\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"Py-_dfP9FwlJIULiJFsiOA\":{\"token\":\"$2a$10$ZjpGbR.JvLONZPozQEorsO0Zufz9Frg3tLP1RKckWYpLHyzzTPksm\",\"expiry\":1691847614,\"previous_token\":\"$2a$10$JODkxdS2IuPvpbvcAnbdCuIpm65N26H0OLkU4962pB0.CslM01SoO\",\"updated_at\":\"2023-07-29T13:40:14Z\"},\"yZIWF18loabp8f19dI5Jdg\":{\"token\":\"$2a$10$IywDZXj9b9dzkzSPjhXdyesbiCT6j/gWr.D.feRM/fg0c9MbAripa\",\"expiry\":1691849924,\"previous_token\":\"$2a$10$46ojrDvLWs5TCixU8tgc/eKuhInjjOUA.JNZHT9KktSh3EGn8ydhy\",\"updated_at\":\"2023-07-29T14:18:44Z\"},\"mBK1BRPyi319-JXYQpNRKA\":{\"token\":\"$2a$10$RNrAfXaOIg4t89nB/fUpQeTiENAxSzYPUSPpTJubCTsDVcbHPCvfe\",\"expiry\":1691852019}}', `users`.`updated_at` = '2023-07-29 14:53:39.782079' WHERE `users`.`id` = 11[0m
+  [1m[36mUser Load (164.9ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mTRANSACTION (19.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.8ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"},\"eiYagUDZK1_psZPq6hKYPg\":{\"token\":\"$2a$10$K5h0ouAzcDdXWk8IX7lRu.2wxLjjF1ZWFzxYUrpCKGOmcaLRuVLCu\",\"expiry\":1691760363,\"previous_token\":\"$2a$10$GUM4dhT/zGKgws.cquUN9Otq4/Ji/7wbPCyU2C2AQ5Qb.MtpIErQ2\",\"updated_at\":\"2023-07-28T13:26:03Z\"},\"fML43XKu2MrSZRqQQ7HXqw\":{\"token\":\"$2a$10$9xM1fHRqRDRBvuSad2Rd4O4I.rFq4WT174KX8GajD9fiTJ2GbeugK\",\"expiry\":1691822622,\"previous_token\":\"$2a$10$IBUXQdrfBxIMghTfKrYC7.ShFjI7dYvexCN3g6Ggz/mdWHoROm8iS\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"bm7IH2fAx9tt_7oiuCLPKw\":{\"token\":\"$2a$10$nN4D6AJ3kkq3AmbkA3TrpOmx4GN6iKszFSyCwBF5reghrlup8pGca\",\"expiry\":1691822623,\"previous_token\":\"$2a$10$WgewZV/IUYKQqjpZ3X4mW.Q11Upa26iRjGF0/y/1yGQwZPTVWEwJK\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"Py-_dfP9FwlJIULiJFsiOA\":{\"token\":\"$2a$10$ZjpGbR.JvLONZPozQEorsO0Zufz9Frg3tLP1RKckWYpLHyzzTPksm\",\"expiry\":1691847614,\"previous_token\":\"$2a$10$JODkxdS2IuPvpbvcAnbdCuIpm65N26H0OLkU4962pB0.CslM01SoO\",\"updated_at\":\"2023-07-29T13:40:14Z\"},\"yZIWF18loabp8f19dI5Jdg\":{\"token\":\"$2a$10$IywDZXj9b9dzkzSPjhXdyesbiCT6j/gWr.D.feRM/fg0c9MbAripa\",\"expiry\":1691849924,\"previous_token\":\"$2a$10$46ojrDvLWs5TCixU8tgc/eKuhInjjOUA.JNZHT9KktSh3EGn8ydhy\",\"updated_at\":\"2023-07-29T14:18:44Z\"},\"mBK1BRPyi319-JXYQpNRKA\":{\"token\":\"$2a$10$RNrAfXaOIg4t89nB/fUpQeTiENAxSzYPUSPpTJubCTsDVcbHPCvfe\",\"expiry\":1691852019},\"7ykK_E9m9z4YnyzGRTMIaw\":{\"token\":\"$2a$10$uHqKiUSDIo52onJLzJ1EX.wVR5p4xDorfVlC7WmpGmYD8t/4ruts.\",\"expiry\":1691852019}}', `users`.`updated_at` = '2023-07-29 14:53:39.957743' WHERE `users`.`id` = 11[0m
+  [1m[36mUser Load (100.5ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (2.7ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"},\"eiYagUDZK1_psZPq6hKYPg\":{\"token\":\"$2a$10$K5h0ouAzcDdXWk8IX7lRu.2wxLjjF1ZWFzxYUrpCKGOmcaLRuVLCu\",\"expiry\":1691760363,\"previous_token\":\"$2a$10$GUM4dhT/zGKgws.cquUN9Otq4/Ji/7wbPCyU2C2AQ5Qb.MtpIErQ2\",\"updated_at\":\"2023-07-28T13:26:03Z\"},\"fML43XKu2MrSZRqQQ7HXqw\":{\"token\":\"$2a$10$9xM1fHRqRDRBvuSad2Rd4O4I.rFq4WT174KX8GajD9fiTJ2GbeugK\",\"expiry\":1691822622,\"previous_token\":\"$2a$10$IBUXQdrfBxIMghTfKrYC7.ShFjI7dYvexCN3g6Ggz/mdWHoROm8iS\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"bm7IH2fAx9tt_7oiuCLPKw\":{\"token\":\"$2a$10$nN4D6AJ3kkq3AmbkA3TrpOmx4GN6iKszFSyCwBF5reghrlup8pGca\",\"expiry\":1691822623,\"previous_token\":\"$2a$10$WgewZV/IUYKQqjpZ3X4mW.Q11Upa26iRjGF0/y/1yGQwZPTVWEwJK\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"Py-_dfP9FwlJIULiJFsiOA\":{\"token\":\"$2a$10$ZjpGbR.JvLONZPozQEorsO0Zufz9Frg3tLP1RKckWYpLHyzzTPksm\",\"expiry\":1691847614,\"previous_token\":\"$2a$10$JODkxdS2IuPvpbvcAnbdCuIpm65N26H0OLkU4962pB0.CslM01SoO\",\"updated_at\":\"2023-07-29T13:40:14Z\"},\"yZIWF18loabp8f19dI5Jdg\":{\"token\":\"$2a$10$IywDZXj9b9dzkzSPjhXdyesbiCT6j/gWr.D.feRM/fg0c9MbAripa\",\"expiry\":1691849924,\"previous_token\":\"$2a$10$46ojrDvLWs5TCixU8tgc/eKuhInjjOUA.JNZHT9KktSh3EGn8ydhy\",\"updated_at\":\"2023-07-29T14:18:44Z\"},\"mBK1BRPyi319-JXYQpNRKA\":{\"token\":\"$2a$10$GhR86t1zhfK.BmmLeq2.LOV5xy4Kq0ay/XDa7VmpvivDlU9UEU4du\",\"expiry\":1691852020,\"previous_token\":\"$2a$10$RNrAfXaOIg4t89nB/fUpQeTiENAxSzYPUSPpTJubCTsDVcbHPCvfe\",\"updated_at\":\"2023-07-29T14:53:39Z\"},\"7ykK_E9m9z4YnyzGRTMIaw\":{\"token\":\"$2a$10$uHqKiUSDIo52onJLzJ1EX.wVR5p4xDorfVlC7WmpGmYD8t/4ruts.\",\"expiry\":1691852019}}', `users`.`updated_at` = '2023-07-29 14:53:40.141057' WHERE `users`.`id` = 11[0m
+  [1m[36mUser Load (153.2ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1 FOR UPDATE[0m
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 1876ms (Views: 0.4ms | ActiveRecord: 250.4ms | Allocations: 41282)
+
+
+  [1m[36mUser Update (6.3ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"},\"eiYagUDZK1_psZPq6hKYPg\":{\"token\":\"$2a$10$K5h0ouAzcDdXWk8IX7lRu.2wxLjjF1ZWFzxYUrpCKGOmcaLRuVLCu\",\"expiry\":1691760363,\"previous_token\":\"$2a$10$GUM4dhT/zGKgws.cquUN9Otq4/Ji/7wbPCyU2C2AQ5Qb.MtpIErQ2\",\"updated_at\":\"2023-07-28T13:26:03Z\"},\"fML43XKu2MrSZRqQQ7HXqw\":{\"token\":\"$2a$10$9xM1fHRqRDRBvuSad2Rd4O4I.rFq4WT174KX8GajD9fiTJ2GbeugK\",\"expiry\":1691822622,\"previous_token\":\"$2a$10$IBUXQdrfBxIMghTfKrYC7.ShFjI7dYvexCN3g6Ggz/mdWHoROm8iS\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"bm7IH2fAx9tt_7oiuCLPKw\":{\"token\":\"$2a$10$nN4D6AJ3kkq3AmbkA3TrpOmx4GN6iKszFSyCwBF5reghrlup8pGca\",\"expiry\":1691822623,\"previous_token\":\"$2a$10$WgewZV/IUYKQqjpZ3X4mW.Q11Upa26iRjGF0/y/1yGQwZPTVWEwJK\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"Py-_dfP9FwlJIULiJFsiOA\":{\"token\":\"$2a$10$ZjpGbR.JvLONZPozQEorsO0Zufz9Frg3tLP1RKckWYpLHyzzTPksm\",\"expiry\":1691847614,\"previous_token\":\"$2a$10$JODkxdS2IuPvpbvcAnbdCuIpm65N26H0OLkU4962pB0.CslM01SoO\",\"updated_at\":\"2023-07-29T13:40:14Z\"},\"yZIWF18loabp8f19dI5Jdg\":{\"token\":\"$2a$10$IywDZXj9b9dzkzSPjhXdyesbiCT6j/gWr.D.feRM/fg0c9MbAripa\",\"expiry\":1691849924,\"previous_token\":\"$2a$10$46ojrDvLWs5TCixU8tgc/eKuhInjjOUA.JNZHT9KktSh3EGn8ydhy\",\"updated_at\":\"2023-07-29T14:18:44Z\"},\"mBK1BRPyi319-JXYQpNRKA\":{\"token\":\"$2a$10$GhR86t1zhfK.BmmLeq2.LOV5xy4Kq0ay/XDa7VmpvivDlU9UEU4du\",\"expiry\":1691852020,\"previous_token\":\"$2a$10$RNrAfXaOIg4t89nB/fUpQeTiENAxSzYPUSPpTJubCTsDVcbHPCvfe\",\"updated_at\":\"2023-07-29T14:53:39Z\"},\"7ykK_E9m9z4YnyzGRTMIaw\":{\"token\":\"$2a$10$.YIqzN885vTekoDINmz10.Eo/2ya8iaa.bsw.MuBb4G0IzSayHVNC\",\"expiry\":1691852020,\"previous_token\":\"$2a$10$uHqKiUSDIo52onJLzJ1EX.wVR5p4xDorfVlC7WmpGmYD8t/4ruts.\",\"updated_at\":\"2023-07-29T14:53:40Z\"}}', `users`.`updated_at` = '2023-07-29 14:53:40.511027' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (20.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 2276ms (Views: 0.5ms | ActiveRecord: 468.5ms | Allocations: 45411)
+
+
+Started DELETE "/api/v1/auth/sign_out" for 172.28.0.1 at 2023-07-29 14:53:43 +0000
+Processing by DeviseTokenAuth::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 't@example.com' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"oCPb72akp8Icz88zNUachQ\":{\"token\":\"$2a$10$AFbqhkfPXtRyljkdnvctAOMuu6ANLhnJdB522tBvABrcQiS2o4iVq\",\"expiry\":1691757244,\"previous_token\":\"$2a$10$SvA3pxTNd6Klz.Qf3LN3ceU.viBHUkA7nxOovqXCWUbAklGeUgFfC\",\"updated_at\":\"2023-07-28T12:34:04Z\"},\"tXSreoXUFW19eLX_lCEI8w\":{\"token\":\"$2a$10$Fm/sUhQ9TeD.xXYq9WQwhe1yy.YEDNwqbIeXkH5Hs0eajyd7Ntifm\",\"expiry\":1691757259,\"previous_token\":\"$2a$10$iO6z2hjH4/yj89YUesCd0.LYS5Wk2X.L6yX2YjVw3yFJe4HLySi9m\",\"updated_at\":\"2023-07-28T12:34:19Z\"},\"eiYagUDZK1_psZPq6hKYPg\":{\"token\":\"$2a$10$K5h0ouAzcDdXWk8IX7lRu.2wxLjjF1ZWFzxYUrpCKGOmcaLRuVLCu\",\"expiry\":1691760363,\"previous_token\":\"$2a$10$GUM4dhT/zGKgws.cquUN9Otq4/Ji/7wbPCyU2C2AQ5Qb.MtpIErQ2\",\"updated_at\":\"2023-07-28T13:26:03Z\"},\"fML43XKu2MrSZRqQQ7HXqw\":{\"token\":\"$2a$10$9xM1fHRqRDRBvuSad2Rd4O4I.rFq4WT174KX8GajD9fiTJ2GbeugK\",\"expiry\":1691822622,\"previous_token\":\"$2a$10$IBUXQdrfBxIMghTfKrYC7.ShFjI7dYvexCN3g6Ggz/mdWHoROm8iS\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"bm7IH2fAx9tt_7oiuCLPKw\":{\"token\":\"$2a$10$nN4D6AJ3kkq3AmbkA3TrpOmx4GN6iKszFSyCwBF5reghrlup8pGca\",\"expiry\":1691822623,\"previous_token\":\"$2a$10$WgewZV/IUYKQqjpZ3X4mW.Q11Upa26iRjGF0/y/1yGQwZPTVWEwJK\",\"updated_at\":\"2023-07-29T06:43:42Z\"},\"Py-_dfP9FwlJIULiJFsiOA\":{\"token\":\"$2a$10$ZjpGbR.JvLONZPozQEorsO0Zufz9Frg3tLP1RKckWYpLHyzzTPksm\",\"expiry\":1691847614,\"previous_token\":\"$2a$10$JODkxdS2IuPvpbvcAnbdCuIpm65N26H0OLkU4962pB0.CslM01SoO\",\"updated_at\":\"2023-07-29T13:40:14Z\"},\"yZIWF18loabp8f19dI5Jdg\":{\"token\":\"$2a$10$IywDZXj9b9dzkzSPjhXdyesbiCT6j/gWr.D.feRM/fg0c9MbAripa\",\"expiry\":1691849924,\"previous_token\":\"$2a$10$46ojrDvLWs5TCixU8tgc/eKuhInjjOUA.JNZHT9KktSh3EGn8ydhy\",\"updated_at\":\"2023-07-29T14:18:44Z\"},\"mBK1BRPyi319-JXYQpNRKA\":{\"token\":\"$2a$10$GhR86t1zhfK.BmmLeq2.LOV5xy4Kq0ay/XDa7VmpvivDlU9UEU4du\",\"expiry\":1691852020,\"previous_token\":\"$2a$10$RNrAfXaOIg4t89nB/fUpQeTiENAxSzYPUSPpTJubCTsDVcbHPCvfe\",\"updated_at\":\"2023-07-29T14:53:39Z\"}}', `users`.`updated_at` = '2023-07-29 14:53:43.642768' WHERE `users`.`id` = 11[0m
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 110ms (Views: 0.4ms | ActiveRecord: 7.0ms | Allocations: 4768)
+
+
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-07-29 14:55:02 +0000
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"hoge", "email"=>"hoge@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"hoge", "email"=>"hoge@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fd0f5ab7318>, params: {"name"=>"hoge", "email"=>"hoge@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"hoge", "email"=>"hoge@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fd0f5ab7318>, params: {"name"=>"hoge", "email"=>"hoge@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"hoge", "email"=>"hoge@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fd0f5ab7318>, params: {"name"=>"hoge", "email"=>"hoge@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"hoge", "email"=>"hoge@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (15.6ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'hoge@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (85.8ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', 'hoge@example.com', '$2a$12$uc0KWmtQEcM1zUO/T59v4uHxc8ZsYS7ncTNJ/RWw.xhvdS1ePE.ou', NULL, NULL, FALSE, NULL, NULL, NULL, NULL, NULL, 'hoge', NULL, NULL, 'hoge@example.com', NULL, '2023-07-29 14:55:04.821676', '2023-07-29 14:55:04.821676')[0m
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (2.3ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"JEv3BC4eIP_PM4jKKruplw\":{\"token\":\"$2a$10$J4e4AZB9pOMnI7WUR8759OZLux8NK8uqEBS2ozPM3dE/rv2nopn5m\",\"expiry\":1691852105}}', `users`.`updated_at` = '2023-07-29 14:55:05.247625' WHERE `users`.`id` = 12[0m
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (3.0ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"JEv3BC4eIP_PM4jKKruplw\":{\"token\":\"$2a$10$IgarlyYdy.BOXAkuJx9bcOHua8N1eZLtWqZB2IUKpq3vH61EK2glS\",\"expiry\":1691852105,\"previous_token\":\"$2a$10$J4e4AZB9pOMnI7WUR8759OZLux8NK8uqEBS2ozPM3dE/rv2nopn5m\",\"updated_at\":\"2023-07-29T14:55:05Z\"}}', `users`.`updated_at` = '2023-07-29 14:55:05.433351' WHERE `users`.`id` = 12[0m
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 2573ms (Views: 3.5ms | ActiveRecord: 149.9ms | Allocations: 24627)
+
+
+Started DELETE "/api/v1/auth/sign_out" for 172.28.0.1 at 2023-07-29 14:55:10 +0000
+Processing by DeviseTokenAuth::SessionsController#destroy as HTML
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'hoge@example.com' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = NULL, `users`.`updated_at` = '2023-07-29 14:55:11.063225' WHERE `users`.`id` = 12[0m
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 165ms (Views: 0.3ms | ActiveRecord: 21.7ms | Allocations: 3979)
+
+
+Started POST "/api/v1/auth/sign_in" for 172.28.0.1 at 2023-07-29 14:56:07 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"hoge@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"hoge@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd0f5e2b378>, params: {"email"=>"hoge@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"hoge@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd0f5e2b378>, params: {"email"=>"hoge@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"hoge@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (12.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 'hoge@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd0f5e2b378>, params: {"email"=>"hoge@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"hoge@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd0f5e2b378>, params: {"email"=>"hoge@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"hoge@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (3.3ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"xq7qO92T2MRV7S1I_FyLVw\":{\"token\":\"$2a$10$WIjw1wh.rHYY.G7qw8WHqOuHAGs7dq.bLnhOo/LOuWMF1WwuKbZAm\",\"expiry\":1691852168}}', `users`.`updated_at` = '2023-07-29 14:56:08.042123' WHERE `users`.`id` = 12[0m
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"xq7qO92T2MRV7S1I_FyLVw\":{\"token\":\"$2a$10$mjcSP.xcg6ErXioqX9Xb7eUhgmHrNOvv32XC2gXZTocBZAGJuVmlO\",\"expiry\":1691852168,\"previous_token\":\"$2a$10$WIjw1wh.rHYY.G7qw8WHqOuHAGs7dq.bLnhOo/LOuWMF1WwuKbZAm\",\"updated_at\":\"2023-07-29T14:56:08Z\"}}', `users`.`updated_at` = '2023-07-29 14:56:08.158778' WHERE `users`.`id` = 12[0m
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 527ms (Views: 0.4ms | ActiveRecord: 32.0ms | Allocations: 11401)
+
+
+Started DELETE "/api/v1/auth/sign_out" for 172.28.0.1 at 2023-07-29 14:56:11 +0000
+Processing by DeviseTokenAuth::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'hoge@example.com' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = NULL, `users`.`updated_at` = '2023-07-29 14:56:11.942041' WHERE `users`.`id` = 12[0m
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 105ms (Views: 0.3ms | ActiveRecord: 9.0ms | Allocations: 3962)
+
+
