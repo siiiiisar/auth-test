@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { AuthContext } from "../App"
 
 export const Home = () => {
-  const { isSignedIn, currentUser } = useContext(AuthContext)
+  const { isSignedIn, currentUser} = useContext(AuthContext)
 
   return(
     <>

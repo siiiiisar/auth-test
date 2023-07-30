@@ -10,7 +10,7 @@ export const CommonLayout = (props) => {
       </header>
       <main>
         <Container maxWidth="lg">
-          <Grid container justify="center">
+          <Grid container alignItems="center" justifyContent="center">
             <Grid item>
               {children}
             </Grid>   
