@@ -1564,3 +1564,950 @@ Processing by Api::V1::Auth::SessionsController#index as HTML
 Completed 200 OK in 136ms (Views: 0.8ms | ActiveRecord: 13.1ms | Allocations: 6204)
 
 
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-07-31 12:48:43 +0000
+  
+SyntaxError (/api/config/routes.rb:9: syntax error, unexpected local variable or method, expecting '}'
+        omniauth_callbacks: 'api/v1/auth/omniauth_callb...
+        ^~~~~~~~~~~~~~~~~~
+):
+  
+config/routes.rb:9: syntax error, unexpected local variable or method, expecting '}'
+config/routes.rb:9: syntax error, unexpected local variable or method, expecting '}'
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-07-31 12:48:47 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/auth/sessions"):
+  
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-07-31 12:49:00 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/auth/sessions"):
+  
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-07-31 12:49:00 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/auth/sessions"):
+  
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-07-31 12:49:08 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/auth/spotify"):
+  
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-07-31 13:24:02 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (48.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-07-31 13:24:03 +0000
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-07-31 13:24:03 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-07-31 13:24:04 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-07-31 13:24:29 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-07-31 13:24:29 +0000
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Redirected to http://localhost:3001/auth/sign_in
+Completed 302 Found in 44ms (ActiveRecord: 0.0ms | Allocations: 1004)
+
+
+Started GET "/auth/sign_in" for 172.28.0.1 at 2023-07-31 13:24:29 +0000
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 479)
+
+
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-07-31 13:24:42 +0000
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-07-31 13:24:42 +0000
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-07-31 13:24:42 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-07-31 13:24:43 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-07-31 13:25:18 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-07-31 13:25:18 +0000
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Redirected to http://localhost:3001/auth/sign_in
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/auth/sign_in" for 172.28.0.1 at 2023-07-31 13:25:18 +0000
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 6ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 112)
+
+
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-07-31 13:32:51 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-07-31 13:32:53 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-07-31 13:32:53 +0000
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-07-31 13:32:53 +0000
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-07-31 13:32:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-07-31 13:33:13 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-08-02 13:10:03 +0000
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-08-02 13:10:05 +0000
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-02 13:10:05 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-02 13:10:24 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-02 13:10:24 +0000
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-02 22:47:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-08-02 22:47:40 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-02 22:47:40 +0000
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-08-02 22:47:40 +0000
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-02 22:47:40 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+  
+NameError (undefined local variable or method `protect_from_forgery' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-02 22:47:42 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-08-03 03:04:16 +0000
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-03 03:04:19 +0000
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-08-03 03:04:19 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-03 03:04:19 +0000
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-03 03:04:19 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-03 03:04:19 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 7ms (Allocations: 376)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:253:in `handle_unverified_request'
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:286:in `handle_unverified_request'
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:275:in `verify_authenticity_token'
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:235:in `block in action'
+devise (4.9.2) lib/devise/omniauth.rb:19:in `block in <main>'
+omniauth (2.1.1) lib/omniauth/strategy.rb:545:in `fail!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.1) lib/omniauth/builder.rb:44:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-08-03 03:08:48 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (7.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-08-03 03:08:49 +0000
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-03 03:08:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-03 03:08:49 +0000
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-03 03:08:49 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-03 03:08:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.0ms | Allocations: 391)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:253:in `handle_unverified_request'
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:286:in `handle_unverified_request'
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:275:in `verify_authenticity_token'
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:235:in `block in action'
+devise (4.9.2) lib/devise/omniauth.rb:19:in `block in <main>'
+omniauth (2.1.1) lib/omniauth/strategy.rb:545:in `fail!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.1) lib/omniauth/builder.rb:44:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-08-03 04:37:30 +0000
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-08-03 04:37:31 +0000
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-03 04:37:31 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-03 04:37:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-08-05 01:24:11 +0000
+Started GET "/api/v1/auth/sessions" for 172.28.0.1 at 2023-08-05 01:24:14 +0000
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-05 01:24:14 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Started GET "/omniauth/sessions?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-05 01:24:15 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/omniauth/sessions"):
+  
+Started POST "/api/v1/auth" for 172.28.0.1 at 2023-08-16 08:28:19 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (64.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"testName", "email"=>"testmail@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"testName", "email"=>"testmail@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f61d484ec60>, params: {"name"=>"testName", "email"=>"testmail@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"testName", "email"=>"testmail@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f61d484ec60>, params: {"name"=>"testName", "email"=>"testmail@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"testName", "email"=>"testmail@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :registration. Context: { controller: Api::V1::Auth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f61d484ec60>, params: {"name"=>"testName", "email"=>"testmail@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"api/v1/auth/registrations", "action"=>"create", "registration"=>{"name"=>"testName", "email"=>"testmail@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (9.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'testmail@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (18.2ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', 'testmail@example.com', '$2a$12$0p4MDin1cmkYgT9o.x9Ml.gx0J/OuWaDFC0x3Ndfp4QQNj6sZhAo.', NULL, NULL, FALSE, NULL, NULL, NULL, NULL, NULL, 'testName', NULL, NULL, 'testmail@example.com', NULL, '2023-08-16 08:28:21.161577', '2023-08-16 08:28:21.161577')[0m
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (5.3ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"tUiwEYXWBbs1i_Ft7FF1rA\":{\"token\":\"$2a$10$hRknlNKWZj7fZXekymkMFO6k4ZgbC1BTpFTW4AEYpTonAQQ9hGLT.\",\"expiry\":1693384101}}', `users`.`updated_at` = '2023-08-16 08:28:21.290822' WHERE `users`.`id` = 13[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (2.0ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"tUiwEYXWBbs1i_Ft7FF1rA\":{\"token\":\"$2a$10$K1UAs63EDcPoiBwL6gohDOxKPIRh6cUp7MH2U9kGclPpIw/wbCm2G\",\"expiry\":1693384101,\"previous_token\":\"$2a$10$hRknlNKWZj7fZXekymkMFO6k4ZgbC1BTpFTW4AEYpTonAQQ9hGLT.\",\"updated_at\":\"2023-08-16T08:28:21Z\"}}', `users`.`updated_at` = '2023-08-16 08:28:21.393984' WHERE `users`.`id` = 13[0m
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 817ms (Views: 0.3ms | ActiveRecord: 75.0ms | Allocations: 33719)
+
+
+Started DELETE "/api/v1/auth/sign_out" for 172.28.0.1 at 2023-08-16 08:29:16 +0000
+Processing by DeviseTokenAuth::SessionsController#destroy as HTML
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'testmail@example.com' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (4.6ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = NULL, `users`.`updated_at` = '2023-08-16 08:29:17.098600' WHERE `users`.`id` = 13[0m
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 134ms (Views: 0.7ms | ActiveRecord: 14.8ms | Allocations: 4632)
+
+
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-16 08:29:18 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-16 08:29:18 +0000
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Redirected to http://localhost:3001/auth/sign_in
+Completed 302 Found in 29ms (ActiveRecord: 0.0ms | Allocations: 889)
+
+
+Started GET "/auth/sign_in" for 172.28.0.1 at 2023-08-16 08:29:18 +0000
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 123)
+
+
+Started POST "/api/v1/auth/sign_in" for 172.28.0.1 at 2023-08-16 08:30:04 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"testmail@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"testmail@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f61d1d503d8>, params: {"email"=>"testmail@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"testmail@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f61d1d503d8>, params: {"email"=>"testmail@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"testmail@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 'testmail@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f61d1d503d8>, params: {"email"=>"testmail@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"testmail@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f61d1d503d8>, params: {"email"=>"testmail@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"testmail@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (3.3ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (2.3ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"fsJc7SeQ3qGGSCI-qvzEeQ\":{\"token\":\"$2a$10$hrnrYXlF9PDGszVsB1vx1ONgeFNWuqthXL836D3vBdOVjCpSy/2L.\",\"expiry\":1693384205}}', `users`.`updated_at` = '2023-08-16 08:30:05.218417' WHERE `users`.`id` = 13[0m
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.9ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (2.8ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"fsJc7SeQ3qGGSCI-qvzEeQ\":{\"token\":\"$2a$10$a3ZCdPg3yaPrr.tLyyapyu.uPakD1gXQDtb3f0LDjjcCvgUE1uq9S\",\"expiry\":1693384205,\"previous_token\":\"$2a$10$hrnrYXlF9PDGszVsB1vx1ONgeFNWuqthXL836D3vBdOVjCpSy/2L.\",\"updated_at\":\"2023-08-16T08:30:05Z\"}}', `users`.`updated_at` = '2023-08-16 08:30:05.308842' WHERE `users`.`id` = 13[0m
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 464ms (Views: 0.2ms | ActiveRecord: 29.7ms | Allocations: 13853)
+
+
+Started DELETE "/api/v1/auth/sign_out" for 172.28.0.1 at 2023-08-17 04:53:04 +0000
+Processing by DeviseTokenAuth::SessionsController#destroy as HTML
+  [1m[36mUser Load (48.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'testmail@example.com' LIMIT 1[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (20.0ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = NULL, `users`.`updated_at` = '2023-08-17 04:53:07.508152' WHERE `users`.`id` = 13[0m
+  [1m[36mTRANSACTION (24.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 562ms (Views: 1.9ms | ActiveRecord: 128.4ms | Allocations: 9049)
+
+
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-17 04:53:16 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-17 04:53:16 +0000
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Redirected to http://localhost:3001/auth/sign_in
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Started GET "/auth/sign_in" for 172.28.0.1 at 2023-08-17 04:53:16 +0000
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 114)
+
+
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-17 05:10:46 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-17 05:10:46 +0000
+  
+NameError (undefined local variable or method `protect_from_forgery' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-17 05:14:59 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-17 05:14:59 +0000
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 11ms (Allocations: 306)
+
+
+  
+NoMethodError (undefined method `flash=' for #<ActionDispatch::Request POST "http://localhost:3001/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1>):
+  
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:203:in `handle_unverified_request'
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:286:in `handle_unverified_request'
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:275:in `verify_authenticity_token'
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:235:in `block in action'
+devise (4.9.2) lib/devise/omniauth.rb:19:in `block in <main>'
+omniauth (2.1.1) lib/omniauth/strategy.rb:545:in `fail!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.1) lib/omniauth/builder.rb:44:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-17 11:43:27 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-17 11:43:28 +0000
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Redirected to http://localhost:3001/auth/sign_in
+Completed 302 Found in 6ms (Allocations: 314)
+
+
+Started GET "/auth/sign_in" for 172.28.0.1 at 2023-08-17 11:43:28 +0000
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 3ms (Views: 1.1ms | Allocations: 283)
+
+
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-17 11:46:07 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-17 11:46:08 +0000
+  
+ArgumentError (Before process_action callback :verify_authenticity_token has not been defined):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-17 11:47:48 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-17 11:47:48 +0000
+  
+ArgumentError (Before process_action callback :verify_authenticity_token has not been defined):
+  
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-17 12:08:20 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-17 12:08:20 +0000
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 8ms (Allocations: 303)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:253:in `handle_unverified_request'
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:286:in `handle_unverified_request'
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:275:in `verify_authenticity_token'
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:235:in `block in action'
+devise (4.9.2) lib/devise/omniauth.rb:19:in `block in <main>'
+omniauth (2.1.1) lib/omniauth/strategy.rb:545:in `fail!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.1) lib/omniauth/builder.rb:44:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-17 12:08:48 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-17 12:08:48 +0000
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 6ms (Allocations: 178)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:253:in `handle_unverified_request'
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:286:in `handle_unverified_request'
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:275:in `verify_authenticity_token'
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:235:in `block in action'
+devise (4.9.2) lib/devise/omniauth.rb:19:in `block in <main>'
+omniauth (2.1.1) lib/omniauth/strategy.rb:545:in `fail!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.1) lib/omniauth/builder.rb:44:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/sign_in" for 172.28.0.1 at 2023-08-17 12:10:25 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"testmail@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"testmail@example.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 5ms (Allocations: 251)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:253:in `handle_unverified_request'
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:286:in `handle_unverified_request'
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:275:in `verify_authenticity_token'
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.6) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:852:in `call'
+omniauth (2.1.1) lib/omniauth/strategy.rb:202:in `call!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.1) lib/omniauth/builder.rb:44:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/sign_in" for 172.28.0.1 at 2023-08-17 12:10:34 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"testmail@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"testmail@example.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 3ms (Allocations: 129)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:253:in `handle_unverified_request'
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:286:in `handle_unverified_request'
+actionpack (7.0.6) lib/action_controller/metal/request_forgery_protection.rb:275:in `verify_authenticity_token'
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.6) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:852:in `call'
+omniauth (2.1.1) lib/omniauth/strategy.rb:202:in `call!'
+omniauth (2.1.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.1) lib/omniauth/builder.rb:44:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/sign_in" for 172.28.0.1 at 2023-08-17 12:11:58 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"testmail@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"testmail@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f61d3a32960>, params: {"email"=>"testmail@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"testmail@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f61d3a32960>, params: {"email"=>"testmail@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"testmail@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (54.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 'testmail@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f61d3a32960>, params: {"email"=>"testmail@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"testmail@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f61d3a32960>, params: {"email"=>"testmail@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"testmail@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (5.4ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (8.5ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"mPD6Ey7SlrrogV3gsZ8O5g\":{\"token\":\"$2a$10$qkirIq1UdLCRz.IdL6eV6uHy.82NeDBFRyvIzt606zv42Skxj3fhC\",\"expiry\":1693483919}}', `users`.`updated_at` = '2023-08-17 12:11:59.596604' WHERE `users`.`id` = 13[0m
+  [1m[36mTRANSACTION (18.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (2.2ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (3.6ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"mPD6Ey7SlrrogV3gsZ8O5g\":{\"token\":\"$2a$10$lVDs3iRXd8PAAWJbt/RwVOwY7FN2QlHF.4DMkodh1zb2CysPaxGyO\",\"expiry\":1693483919,\"previous_token\":\"$2a$10$qkirIq1UdLCRz.IdL6eV6uHy.82NeDBFRyvIzt606zv42Skxj3fhC\",\"updated_at\":\"2023-08-17T12:11:59Z\"}}', `users`.`updated_at` = '2023-08-17 12:11:59.731576' WHERE `users`.`id` = 13[0m
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 726ms (Views: 0.4ms | ActiveRecord: 121.0ms | Allocations: 16699)
+
+
+Started DELETE "/api/v1/auth/sign_out" for 172.28.0.1 at 2023-08-17 12:12:03 +0000
+Processing by DeviseTokenAuth::SessionsController#destroy as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'testmail@example.com' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (2.2ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = NULL, `users`.`updated_at` = '2023-08-17 12:12:03.443410' WHERE `users`.`id` = 13[0m
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 102ms (Views: 0.3ms | ActiveRecord: 11.1ms | Allocations: 4191)
+
+
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-17 12:12:04 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-17 12:12:04 +0000
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Redirected to http://localhost:3001/auth/sign_in
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Started GET "/auth/sign_in" for 172.28.0.1 at 2023-08-17 12:12:04 +0000
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 114)
+
+
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-17 12:13:44 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-17 12:13:44 +0000
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Redirected to http://localhost:3001/auth/sign_in
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 175)
+
+
+Started GET "/auth/sign_in" for 172.28.0.1 at 2023-08-17 12:13:44 +0000
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 110)
+
+
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-17 12:20:10 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-17 12:20:10 +0000
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Redirected to http://localhost:3001/auth/sign_in
+Completed 302 Found in 11ms (Allocations: 176)
+
+
+Started GET "/auth/sign_in" for 172.28.0.1 at 2023-08-17 12:20:11 +0000
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 4ms (Views: 0.8ms | Allocations: 110)
+
+
+Started GET "/signin" for 172.28.0.1 at 2023-08-17 12:20:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+Started GET "/favicon.ico" for 172.28.0.1 at 2023-08-17 12:20:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/api/v1/auth/spotify" for 172.28.0.1 at 2023-08-17 12:21:24 +0000
+Started POST "/omniauth/spotify?namespace_name=api_v1&resource_class=User" for 172.28.0.1 at 2023-08-17 12:21:24 +0000
+Processing by Devise::OmniauthCallbacksController#failure as HTML
+  Parameters: {"namespace_name"=>"api_v1", "resource_class"=>"User"}
+Redirected to http://localhost:3001/auth/sign_in
+Completed 302 Found in 6ms (Allocations: 175)
+
+
+Started GET "/auth/sign_in" for 172.28.0.1 at 2023-08-17 12:21:24 +0000
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 1ms (Views: 0.4ms | Allocations: 109)
+
+

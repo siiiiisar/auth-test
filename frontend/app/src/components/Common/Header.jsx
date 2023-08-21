@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { signOut } from "../../services/authService";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import LoginButton from "../Auth/Auth0LoginButton";
 
 export const Header = () => {
   const { isSignedIn , setIsSignedIn } = useContext(AuthContext);
@@ -60,6 +61,9 @@ export const Header = () => {
         >
           Sign up
         </Button>
+        <LoginButton>
+          Auth0
+        </LoginButton>
         </>
       )
     }
